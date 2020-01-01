@@ -13,15 +13,43 @@ https://github.com/P3TERX/aria2.sh
 
 ## 系统要求
 
-CentOS 6+ / Debian 6+ / Ubuntu 14.04+
+Ubuntu 18.04.3 (LTS) x64
 
 ## 下载安装
+-----------------------------------------------------------------------------------
+	新手專區
+新手不會 git clone語言請走此步驟
+請把該更新的更新完畢,以免奇怪問題發生導致無法安裝
+安裝環境使用 Ubuntu 18.04.3 (LTS) x64
+請勿安裝其他版本,新版測試並沒有比較穩定,追新者要嘗試也是可以
+#
+sudo apt-get update 
+#
+sudo apt-get dist-upgrade	
+#更新完成後重啟伺服器
+reboot
+1
+#
+wget https://github.com/vivasandy1982/aria2-pro1/blob/master/aria2-pro1-master.zip
+#
+apt install unzip
+#
+unzip aria2-pro1-master.zip
+#
+cd aria2-pro1-master
+#執行快速部署腳本
+chmod +x aria2.sh && ./aria2.sh
+#剩餘步驟請參照以下使用說明
+-------------------------------------------------------------------------------------
 
 執行下面的代碼下載並運行腳本，出現腳本操作表單時輸入 `1` 開始安裝。
 
+--------------------------原創者安裝---------------------------------------------------------
 ```shell
 wget -N git.io/aria2.sh && chmod +x aria2.sh && ./aria2.sh
 ```
+--------------------------原創者安裝---------------------------------------------------------
+
 
 ## 使用說明
 
@@ -142,3 +170,20 @@ wget -N git.io/aria2.sh && chmod +x aria2.sh && ./aria2.sh
 - 感谢 Toyo 大佬
 
 </details>
+
+2019 最新四合一魔改版
+#執行腳本後請注意不要每個都安裝,請參照以下對應順序
+cd aria2-pro1-master
+#安裝過程中有yes選yes,總之一直enter直走就對了
+wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x 4for1tcp.sh && ./4for1tcp.sh
+#安裝魔改版本請照右側表單數字依序安裝 1.4.5.6
+安裝過程中遇到提示畫面並且選項反白停留在yes的選項時請注意,提示畫面最後一行英文是>>>>>abort kernel removal??<<<<<<<<
+請選擇no跳出之後隨即會提示重啟伺服器,選擇yes
+安裝完順序６之後請先重啟伺服器
+＃           
+reboot
+#執行腳本指令看是否bbr與魔改加速是否正常啟動
+wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x 4for1tcp.sh && ./4for1tcp.sh
+#顯示bbr與魔改都成功啟動後選擇10優化配置,接者會提示重啟伺服器請選擇y
+#檢查你的aria2是否正常運作
+/etc/init.d/aria2 status
