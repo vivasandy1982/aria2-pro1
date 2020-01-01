@@ -121,7 +121,7 @@ wget -N git.io/aria2.sh && chmod +x aria2.sh && ./aria2.sh
 * [OneDrive、Google Drive 等運端硬碟下載](https://p3terx.com/archives/offline-download-of-onedrive-gdrive.html)
 * [百度雲端硬碟到 OneDrive 、Google Drive 等其他雲端硬碟](https://p3terx.com/archives/baidunetdisk-transfer-to-onedrive-and-google-drive.html)
 
---------------------------2019/12 bbr加速四合一暴力魔改最新版本(修正後穩定版）--------------------------------------------------
+--------------------------2019/12 bbr加速四合一暴力魔改最新版本(修正後穩定版）------------------------------------
 #
 執行腳本後請注意不要每個都安裝,請參照以下對應順序
 #
@@ -138,7 +138,7 @@ wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x
 請選擇no跳出之後隨即會提示重啟伺服器,選擇yes
 #
 安裝完順序６之後請先重啟伺服器
-＃           
+#          
 reboot
 #
 執行腳本指令看是否bbr與魔改加速是否正常啟動
@@ -150,6 +150,8 @@ wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x
 檢查你的aria2是否正常運作
 #
 /etc/init.d/aria2 status
+-----------------------------------------------------------------------------------------------------------------
+------------------------wireguard ipv4 ipv6 合併加速--------------------------------------------------------------
 
 
 
