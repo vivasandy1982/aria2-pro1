@@ -239,8 +239,8 @@ wget https://raw.githubusercontent.com/complexorganizations/wireguard-install/ma
 #
 bash wireguard-server.sh
 #
-System public IPV4 address is 64.225.68.105. Is that correct? [y/n]: y
-System public IPV6 address is 2a03:b0c0:2:f0::1dc:6001. Is that correct? [y/n]: y
+System public IPV4 address is 6x4.x5.xx.xx. Is that correct? [y/n]: y
+System public IPV6 address is 2xxx:xxxxc0:x2:x::xxc:xxx1. Is that correct? [y/n]: y
 System public nic address is eth0. Is that correct? [y/n]: y
 What port do you want WireGuard server to listen to?
    1) 51820 (Recommended)
