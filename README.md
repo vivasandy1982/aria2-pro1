@@ -1,5 +1,6 @@
 
-# Aria2－Pro 最強版本 快速部署安裝
+# Aria2－Pro+2019/12 魔改四合一最新修正穩定版本＋wireguard ipv4 ipv6 高穩定快速安全外國版本 
+全部整合而一 ２０２０跨年最新最強版本 白帽珊蒂整理送給大家  快速部署安裝
 <p align="center">
 	<img src="/service/whk.jpg" />
 </p>
@@ -121,7 +122,7 @@ wget -N git.io/aria2.sh && chmod +x aria2.sh && ./aria2.sh
 * [OneDrive、Google Drive 等運端硬碟下載](https://p3terx.com/archives/offline-download-of-onedrive-gdrive.html)
 * [百度雲端硬碟到 OneDrive 、Google Drive 等其他雲端硬碟](https://p3terx.com/archives/baidunetdisk-transfer-to-onedrive-and-google-drive.html)
 
---------------------------2019/12 bbr加速四合一暴力魔改最新版本(修正後穩定版）------------------------------------
+--------------------------2019/12 bbr加速四合一暴力魔改最新版本(修正後穩定版）--------------------------------------------------
 #
 執行腳本後請注意不要每個都安裝,請參照以下對應順序
 #
@@ -138,7 +139,7 @@ wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x
 請選擇no跳出之後隨即會提示重啟伺服器,選擇yes
 #
 安裝完順序６之後請先重啟伺服器
-#          
+＃           
 reboot
 #
 執行腳本指令看是否bbr與魔改加速是否正常啟動
@@ -150,8 +151,6 @@ wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x
 檢查你的aria2是否正常運作
 #
 /etc/init.d/aria2 status
------------------------------------------------------------------------------------------------------------------
-------------------------wireguard ipv4 ipv6 合併加速--------------------------------------------------------------
 
 
 
@@ -210,6 +209,97 @@ wget -N --no-check-certificate "http://shell.p1e.cn/BBR/4for1tcp.sh" && chmod +x
 
 </details>
 
+#
+安裝前先確認你的ipv4與ipv6是否正常
+#
+sudo netplan apply --debug
+#
+執行命令後如果正常不會顯示任何訊息,只有錯誤才會顯示錯誤訊息,很多新手以為vps都是自動化就會配置好ipv6,但胡搞瞎搞就把ipv6或是其他配置給弄亂了
+#
+檢測ipv6是否正常運作
+#
+ping6 2001:4860:4860::8888
+#
+只要出現類似以下資訊就代表ipv6配置運作正常
+#
+PING 2001:4860:4860::8888(2001:4860:4860::8888) 56 data bytes
+64 bytes from 2001:4860:4860::8888: icmp_seq=1 ttl=57 time=3.16 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=2 ttl=57 time=2.79 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=3 ttl=57 time=2.85 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=4 ttl=57 time=2.83 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=5 ttl=57 time=2.88 ms
+Copy
+To exit, press q.
+#
+以上確認沒問題之後開始安裝 wireguard 加速穩定版
+#
+此腳本為外國一群尖端it人員捍衛網路隱私與反政府網路濫權合力不斷更新的高安全隱私腳本,用過之後其他腳本你就可以丟到垃圾桶刪除了
+#
+wget https://raw.githubusercontent.com/complexorganizations/wireguard-install/master/wireguard-server.sh
+#
+bash wireguard-server.sh
+#
+System public IPV4 address is 64.225.68.105. Is that correct? [y/n]: y
+System public IPV6 address is 2a03:b0c0:2:f0::1dc:6001. Is that correct? [y/n]: y
+System public nic address is eth0. Is that correct? [y/n]: y
+What port do you want WireGuard server to listen to?
+   1) 51820 (Recommended)
+   2) Custom (Advanced)
+   3) Random [1024-65535]
+Port choice [1-3]: 2
+Custom port [1-65535]: 58899
+What do you want your keepalive interval to be?
+   1) 25 (Default)
+   2) 0 
+   3) Custom (Advanced)
+Nat Choice [1-3]: 1
+What MTU do you want to use?
+   1) 1280 (Recommended)
+   2) 1420
+   3) Custom (Advanced)
+MTU choice [1-3]: 1
+What IPv do you want to use to connect to WireGuard server?
+   1) IPv4 (Recommended)
+   2) IPv6 (Advanced)
+IP Choice [1-2]: 1
+Do you want to disable IPv4 or IPv6 on the server?
+   1) No (Recommended)
+   2) IPV4
+   3) IPV6
+Disable Host Choice [1-3]: 1
+What traffic do you want the client to forward to wireguard?
+   1) Everything (Recommended)
+   2) Exclude Private IPs (Allows LAN IP connections)
+Client Allowed IP Choice [1-2]: 1
+Do You Want To Install Unbound (y/n): y
+Tell me a name for the client config file. Use one word only, no special characters. (No Spaces)
+Client Name: white-h-hacker-sandy
 
+安裝完成後會顯示qrcode手機可以直接掃code就會自動安裝
+＃
+創建後的服務端描述檔案在此位置
+＃
+Client Config --> /etc/wireguard/clients/white-h-hacker-sandy-wg0.conf
+＃
+如果你要修改設定調整參數可以到此目錄
+Created symlink /etc/systemd/system/multi-user.target.wants/wg-quick@wg0.service → /lib/systemd/system/wg-quick@.service.
+＃
+創建服務端描述檔案執行此命令列
+＃
+bash wireguard-server.sh
+＃
+What do you want to do?
+   1) Show WireGuard Interface
+   2) Start WireGuard Interface
+   3) Stop WireGuard Interface
+   4) Add WireGuard Peer
+   5) Remove WireGuard Peer
+   6) Uninstall WireGuard Interface
+   7) Exit
 
+#
+此部分請自行摸索,不會的話就不要玩vps了 sandy很懶的打字
+＃
+以上 結束 
 
+排版更新近期在弄 sandy要睡了   
