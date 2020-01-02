@@ -14,9 +14,30 @@ Aria2－Pro + 2019/12月魔改四合一最新修正穩定版本 ＋ wireguard ip
 [![GitHub Stars](https://img.shields.io/github/stars/P3TERX/aria2.sh.svg?style=flat-square&label=Stars)](https://github.com/P3TERX/aria2.sh/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/P3TERX/aria2.sh.svg?style=flat-square&label=Forks)](https://github.com/P3TERX/aria2.sh/fork)
 
+
+-------------------------------安裝前請先檢測你的網路環境數值有多安全------------------
+＃
+以下所有腳本白帽珊蒂皆有修正過穩定性與安全數值,安裝之前檢測才可以知道自己的網路是危險或是安全
+＃
+珊蒂的無廣告測速網站
+＃
+https://vivasandy.speedtestcustom.com/
+https://vivasandy.ipv4-only.speedtestcustom.com/
+https://vivasandy.dualstack.speedtestcustom.com/
+#ipv6安全數據檢測
+https://ipv6-test.com/pingtest/
+＃webrtc-溢漏檢測
+https://ip8.com/webrtc-test
+＃測試你的dns是否洩露了你的ip
+https://ip8.com/dnsleaktest
+https://www.dnsleaktest.com/results.html
+##
+----------------------------------------------------------------------------------
+
 ## 原創項目地址
 
 https://github.com/P3TERX/aria2.sh
+##
 
 ## 系统要求
 
